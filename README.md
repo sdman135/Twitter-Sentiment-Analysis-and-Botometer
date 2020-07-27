@@ -1,70 +1,51 @@
-# Anime Recommendation System - Collaborative Filtering Project
+# Twitter Sentiment Analysis & Botometer Bot likelihood
+
 ![](images/dataset-cover.png)
+July 2020
+
+For this time around I chose to do a project that focus on my brand spanking new Twitter Api. After thought I tought I would do a sentiment analysis on the tweets to classify if a tweet is either positive or negative. I also had another project in mind and decided to combine them and added Botometer. Botometer is a package that can rate the likelihood the Twitter user is a bot or human at a threshold.
 
 
-For this project I chose to do another anime related project. Specifically to make a recommendation system to find the similarity between shows and users to suggest comparable anime shows, users and to predicted a user's ratings.
-
-
-The Data:
-
-I used a csv file I cleaned from a previous project, where I had dropped all the hentai anime. I'm not interested in that for this project. Maybe later... ended with 5,561 unique anime data points and a few entries that were not usable. I also used another csv file from kaggle which contained  User Ratings for animes, User ID's and anime ID's, this was used for the in conjunction, collaborative, with the anime dataset.
 
 ## What Did I Do?
 
-* Load and Prepared Data
+* Twitter Api
 
-  - Imported .cvs files, into pandas dataframes
+  - First had to sign up for a Twitter Api
 
-  - Separated dataset to only include Anime TV shows, Didn't want to include movies.
+  - Hid it in a custom .py file so I don't get billed from joyriders...
 
-  - Merged both dataframes on the shared animeID column. As well as drop all non-rated user ratings.
+* The Data
 
-* Did some Exploratory Data Analysis:
+  - Wrote a function that uses tweepy's api call to pull tweets using a 'key word'; and returns the pulled tweets as a Pandas DataFrame. Calling tweepy I focused on four features, is tweet the in english, the user name of the tweeter, tweet must not be a retweet and finally the actual tweet as a string.
 
-  ![](images/EDA.png)
+  - I Pulled 10,000 tweets on each of two topics. First on Donald Trump and then on a Manhwa (Korean Manga) that I love (but it's on hiatus right now) 'Solo Leveling'. It comes highly recommended if your looking for a great action read.
 
-  - Plotted the relationship between User Ratings and total amount of User for each rating (1-10), across all animes.
-  ![](images/Usercount-Rating.png)
+* Sentiment Analysis on tweets:
 
+  - I used a python package (TextBlob) that will provide me with a nice and easy sentiment polarity score. The polarity score is a float with values ranging from -1 to +1 (100% negative sentiment to 100% positive sentiment, respectably).
+  ![](images/polarity_examaple.png)
 
-  - Visualized the Count of Ratings Per Anime (Filtered up to 300 Ratings per Anime
-  ![](images/Ratingcount-Anime.png)
+  - I wrapped sentiment polarity up in a function for easier calling.
 
-  - Visualized the Count of Ratings Per User (Filtered up to 300 Ratings per User
-  ![](images/Ratingcount-User.png)
+  - Next a preformed the sentiment polarity function on the entire dataframe of using a simply lambda function.
+  ![](images/sentiment_head.png)
 
-* Filtered the dataframe
+  - Lastly I classified the sentiment polarity score by positive/negative and displayed a count of each.
+  ![](images/sentiment_class.png)
 
-  - Limited dataframe size to include value counts greater then a min value count(50) of anime_id and user_rating, mainly for computing reasons.
+* Botometer
 
-* Created Matrix - The start of the recommendation system
-
-  - Pivoted the table to show User_ID's on one axis and the Anime TV Shows across the other. This allowed me to chart the User Ratings by User_ID's and Anime.
-
-  - Transposed and converted the matrix to a sparse matrices
-
-* Computed the the similarities
-
-  - I ran the spared matrix and transposed matrix through cosine_similarity to find the anime and user similarities
-
-  - Inserted the 2 similarity matrices into separate dataframes
-
-* I made functions to call for the recommendations of:
-  - Top Similar Animes
-  - Top Similar Users with similarity values
-  - Similar User Ratings
-  - Predicted Rating of a Anime and a User specified.
-
-* Lastly I made a Function to calculated the Mean Square Error and the Root Mean Square Error of the Predicted Rating of a Anime and a User specified, mentioned above.
+  - Lastly I ran Botometer, using Twitter's Api, on a few users is run an analysis on whether the user is likely a bot or a human
 
 
-Hope You'll enjoy my Anime Recommendation - Collaborative Filtering Project
+Hope You'll enjoy my Twitter Sentiment Analysis & Botometer Project
 
 ## Built With
 
-* Python3.8
+* Python 3.8
 * Jupyter Notebook 6.0.0
-* A few of the main imports: pandas, numpy, pyplot, scipy, sklearn
+* A few of the main imports: pandas, tweepy, requests, TextBlob, Botometer
 
 
 ## Authors
