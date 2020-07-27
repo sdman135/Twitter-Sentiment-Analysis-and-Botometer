@@ -34,7 +34,8 @@ For this time around I chose to do a project that focus on my brand spanking new
 
   - Lastly I classified the sentiment polarity score by positive/negative and displayed a count of each.
 ![](images/sentiment_class.png)
-
+  Had to censor user info
+  
 * Botometer
 
   - Lastly I ran Botometer, using Twitter's Api, on a few users. Botometer runs analysis on whether the user is likely a bot or a human.
