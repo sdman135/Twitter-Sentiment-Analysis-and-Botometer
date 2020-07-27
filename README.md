@@ -1,7 +1,8 @@
 # Twitter Sentiment Analysis & Botometer Bot likelihood
+July 2020
 
 ![](images/python_twitter_sentiment-cover.png)
-July 2020
+
 
 For this time around I chose to do a project that focus on my brand spanking new Twitter Api. After thought I wanted do a sentiment analysis on the tweets and to classify if a tweet is either positive or negative. I also had another project in mind and decided to combine them and added Botometer. Botometer is a package that can rate the likelihood the Twitter user is a bot or human at a threshold.
 
@@ -24,24 +25,24 @@ For this time around I chose to do a project that focus on my brand spanking new
 * Sentiment Analysis on tweets:
 
   - I used a python package (TextBlob) that will provide me with a nice and easy sentiment polarity score. The polarity score is a float with values ranging from -1 to +1 (100% negative sentiment to 100% positive sentiment, respectably).
-  ![](images/polarity_examaple.png)
+![](images/polarity_examaple.png)
 
   - I wrapped sentiment polarity up in a function for easier calling.
 
   - Next a preformed the sentiment polarity function on the entire dataframe of using a simply lambda function.
-  ![](images/sentiment_head.png)
+![](images/sentiment_head.png)
 
   - Lastly I classified the sentiment polarity score by positive/negative and displayed a count of each.
-  ![](images/sentiment_class.png)
+![](images/sentiment_class.png)
 
 * Botometer
 
   - Lastly I ran Botometer, using Twitter's Api, on a few users. Botometer runs analysis on whether the user is likely a bot or a human.
-
+![](images/botometer_example.png)
 
 Hope You enjoyed my A Twitter Sentiment Analysis & Botometer Project
 
-Add me on LinkedIn
+Add me on LinkedIn if you liked.
 
 ## Built With
 
