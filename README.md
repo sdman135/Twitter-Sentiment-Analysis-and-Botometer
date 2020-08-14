@@ -14,7 +14,7 @@ For this time around I chose to do a project that focus on my brand spanking new
 
   - First had to sign up for a Twitter Api
 
-  - Hid it in a custom .py file so I don't get billed from joyriders...
+  - Hid it in a custom .py file so my credentials wouldn't be revoked or get billed from joyriders...
 
 * The Data
 
