@@ -29,7 +29,7 @@ For this time around I chose to do a project that focus on my brand spanking new
 
   - I wrapped sentiment polarity up in a function for easier calling.
 
-  - Next a preformed the sentiment polarity function on the entire dataframe of using a simply lambda function.
+  - Next I preformed the sentiment polarity function on the entire dataframe by using a simply lambda function.
 ![](images/sentiment_head.png)
 
   - Lastly I classified the sentiment polarity score by positive/negative and displayed a count of each.
