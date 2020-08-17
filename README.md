@@ -18,7 +18,7 @@ For this time around I chose to do a project that focus on my brand spanking new
 
 * The Data
 
-  - Wrote a function that uses tweepy's api call to pull tweets using a 'key word'; and returns the pulled tweets as a Pandas DataFrame. Calling tweepy I focused on four features, is tweet the in english, the user name of the tweeter, tweet must not be a retweet and finally the actual tweet as a string.
+  - Wrote a function that uses tweepy's api call to pull tweets using a 'keyword'; and returns the pulled tweets as a Pandas DataFrame. Calling tweepy I focused on only if the tweet is in english and the tweet must not be a retweet. If they follow these criteria the function will pull the username of the tweeter, the datetime of the tweet and finally the actual tweet in a string format.
 
   - I Pulled 10,000 tweets on each of two topics. First on Donald Trump and then on a Manhwa (Korean Manga) that I love (but it's on hiatus right now) 'Solo Leveling'. It comes highly recommended if your looking for a great action read.
 
