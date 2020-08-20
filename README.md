@@ -50,7 +50,7 @@ Add me on LinkedIn if you liked.
 
 * Python 3.8
 * Jupyter Notebook 6.0.0
-* A few of the main imports: pandas, tweepy, requests, TextBlob, Botometer
+* A few of the main imports: Pandas, Tweepy, Requests, TextBlob, Botometer
 
 
 ## Authors
