@@ -46,6 +46,12 @@ Hope You enjoyed my A Twitter Sentiment Analysis & Botometer Project
 
 Add me on LinkedIn if you liked.
 
+Please check out my blogs on this project:
+
+[Blog - Twitter Sentiment Analysis & Botometer — Part 1: Twitter API](https://medium.com/@sdman135/twitter-sentiment-analysis-botometer-part-1-twitter-api-b7604f7af4e9)
+
+[Blog - Twitter Sentiment Analysis & Botometer — Part 2: The Process](https://medium.com/@sdman135/twitter-sentiment-analysis-botometer-part-2-aecdbbbada30)
+
 ## Built With
 
 * Python 3.8
