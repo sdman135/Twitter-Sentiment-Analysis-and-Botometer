@@ -52,6 +52,8 @@ Please check out my blogs on this project:
 
 [Blog - Twitter Sentiment Analysis & Botometer — Part 2: The Process](https://medium.com/@sdman135/twitter-sentiment-analysis-botometer-part-2-aecdbbbada30)
 
+Any claps or likes would be very much appreciated.
+
 ## Built With
 
 * Python 3.8
